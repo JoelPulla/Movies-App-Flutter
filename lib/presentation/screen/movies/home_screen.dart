@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:movieapp/config/constants/enviroment.dart';
 
 class HomePage extends StatelessWidget {
   static const name = 'home_screen';
@@ -10,7 +12,9 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Page'),
       ),
-      body: null,
+      body: Center(
+        child: Text(Enviroment.theMovieDbKey),
+      ),
     );
   }
 }
